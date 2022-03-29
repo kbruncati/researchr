@@ -32,18 +32,19 @@ data_return <- function(x) {
       download.file(link4download, tf)
       file_names <- unzip(tf, list=TRUE) #list zip archive
       unzip(tf, exdir=td, overwrite=TRUE) #extract files from zip file
-    }} else {
+    }
+    if (x == 2021){ #multiple files in zip case
+      data_multiple <- lapply(file_names$Name, function(x) import(file.path(td, x)))
+      view(data)
+      unlink(td) #delete temp files/directories
+    } else { #one file in zip case
+      data <- import(file.path(td, file_names$Name[1]))
+      view(data)
+      unlink(td) #delete temp files/directories
+    }
+    } else {
       print('Invalid input. Please enter a valid year between 1985 and 2022.')
     }
-  if (x == 2021){ #multiple files in zip case
-    data_multiple <- lapply(file_names$Name, function(x) import(file.path(td, x)))
-    view(data)
-    unlink(td) #delete temp files/directories
-  } else { #one file in zip case
-    data <- import(file.path(td, file_names$Name[1]))
-    view(data)
-    unlink(td) #delete temp files/directories
-  }
 }
 
 options(timeout=1000000) # timeout deafult problem fixed
