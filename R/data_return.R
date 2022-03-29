@@ -1,3 +1,4 @@
+#' @name data_return
 #' @param x a numeric vector containing a positive integer (year)
 #' @return A dataframe or multiple dataframes of funded NIH research opportunities relevant to the year input (x)
 #' @examples
@@ -29,7 +30,7 @@ data_return <- function(x) {
       download.file(link4download, tf)
       unzip(tf)
     }} else {
-      print('Invalid input. Please enter a valid year between 1985 and 2022.') 
+      print('Invalid input. Please enter a valid year between 1985 and 2022.')
     }
   if (x ==2022){
     name <- xmlToDataFrame(paste('RePORTER_PRJ_X_FY', toString(x), '_002.xml', sep=''))
@@ -39,7 +40,7 @@ data_return <- function(x) {
   }
   if (x == 2020){
     name <- xmlToDataFrame(paste('RePORTER_PRJ_X_FY', toString(x), '_new.xml', sep=''))
-  } 
+  }
 }
 
 options(timeout=1000000) # timeout deafult problem fixed
