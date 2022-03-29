@@ -1,4 +1,4 @@
-#' @param x a numeric vector containing a positive value (year)
+#' @param x a numeric vector containing a positive integer (year)
 #' @return A dataframe or multiple dataframes of funded NIH research opportunities relevant to the year input (x)
 #' @examples
 #' data_return(1985)
@@ -40,3 +40,5 @@ data_return <- function(x) {
     print('Invalid input. Please enter a valid year between 1985 and 2022.')
   }
 }
+
+options(timeout=1000000) # timeout deafult problem fixed
