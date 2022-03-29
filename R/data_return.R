@@ -26,8 +26,11 @@ data_return <- function(x) {
   }
   if (x ==2022){
     name <- xmlToDataFrame(paste('RePORTER_PRJ_X_FY', toString(x), '_002.xml', sep=''))
-  } else {
+  }
+  if (x >= 1985 & x <= 2020){
     name <- xmlToDataFrame(paste('RePORTER_PRJ_X_FY', toString(x), '.xml', sep=''))
+  } else {
+    print('Invalid input. Please enter a valid year between 1985 and 2022.')
   }
   #unlink(tf)... do I need this line? Keep for now?
 }
