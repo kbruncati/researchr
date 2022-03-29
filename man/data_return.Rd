@@ -4,7 +4,7 @@
 \alias{data_return}
 \title{data_return}
 \usage{
-data_return()
+data_return(x)
 }
 \arguments{
 \item{x}{a numeric vector containing a positive integer (year)}
