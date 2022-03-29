@@ -12,8 +12,7 @@
 #' @import dplyr
 #' @importFrom utils download.file
 #' @importFrom utils unzip
-#' @import XML
-#' @import xml2
+#' @import tibble
 #' @export
 
 data_return <- function(x) {
