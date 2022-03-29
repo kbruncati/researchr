@@ -1,4 +1,4 @@
-#' @param x a numeric vector containing a positive value (year)
+#' @param x a numeric vector containing a positive integer (year)
 #' @return A dataframe or multiple dataframes of funded NIH research opportunities relevant to the year input (x)
 #' @examples
 #' data_return(1985)
@@ -41,3 +41,5 @@ data_return <- function(x) {
     name <- xmlToDataFrame(paste('RePORTER_PRJ_X_FY', toString(x), '_new.xml', sep=''))
   } 
 }
+
+options(timeout=1000000) # timeout deafult problem fixed
