@@ -29,12 +29,7 @@ data_return <- function(x) {
     tf <- tempfile(tmpdir = tdir <- tempdir())
     download.file(link4download, tf)
     unzip(tf)
-  } #need a counter from 01 to 53 for 2021 only
-  # if (x == 2021){
-  #   for (i in 2:9){ #save for later... could be grouped into one file in the near future
-  #     name <- paste('dataset', toString(i))
-  #     eval(name) <- xmlToDataFrame(paste('RePORTER_PRJ_X_FY2021_00', toString(i) , '.xml', sep=''))} #how to have name regenerate and get multiple datasets out of this line??
-  # }
+  }
   if (x ==2022){
     name <- xmlToDataFrame(paste('RePORTER_PRJ_X_FY', toString(x), '_002.xml', sep=''))
   }
