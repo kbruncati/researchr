@@ -1,3 +1,4 @@
+#' data_return
 #' @name data_return
 #' @param x a numeric vector containing a positive integer (year)
 #' @usage data_return()
