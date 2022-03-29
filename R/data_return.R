@@ -43,5 +43,4 @@ data_return <- function(x) {
   } else {
     print('Invalid input. Please enter a valid year between 1985 and 2022.')
   }
-  #unlink(tf)... do I need this line? Keep for now?
 }
