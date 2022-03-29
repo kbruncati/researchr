@@ -1,7 +1,10 @@
-library(rvest)
-library(dplyr)
-library(XML)
-library(xml2)
+#' @import rvest
+#' @import dyplr
+#' @importFrom stats filter
+#' @importFrom utils download.file
+#' @importFrom utils unzip
+#' @import XML
+#' @import xml2
 #' @export
 
 data_return <- function(x) {
