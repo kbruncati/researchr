@@ -38,12 +38,13 @@ data_return <- function(x) {
   if (x == 2021){ #multiple files in zip case
     data_multiple <- lapply(file_names$Name, function(x) import(file.path(td, x)))
     view(data)
-    unlink(td) #delete temp files/directories
+    #unlink(td) #delete temp files/directories
   } else { #one file in zip case
     data <- import(file.path(td, file_names$Name[1]))
     view(data)
-    unlink(td) #delete temp files/directories
+    #unlink(td) #delete temp files/directories
   }
+  unlink(td) #delete temp files/directories... put here?
 }
 
 options(timeout=1000000) # timeout deafult problem fixed
