@@ -1,5 +1,6 @@
 #' @name data_return
 #' @param x a numeric vector containing a positive integer (year)
+#' @usage data_return()
 #' @return A dataframe or multiple dataframes of funded NIH research opportunities relevant to the year input (x)
 #' @examples
 #' data_return(1985)
