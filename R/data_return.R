@@ -1,3 +1,10 @@
+#' @param x a numeric vector containing a positive value (year)
+#' @return A dataframe or multiple dataframes of funded NIH research opportunities relevant to the year input (x)
+#' @examples
+#' data_return(1985)
+#'
+#' #potential to pass a vector for Div III?
+#'
 #' @import rvest
 #' @import dplyr
 #' @importFrom utils download.file
