@@ -1,5 +1,5 @@
 #' @import rvest
-#' @import dyplr
+#' @import dplyr
 #' @importFrom stats filter
 #' @importFrom utils download.file
 #' @importFrom utils unzip
