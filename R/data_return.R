@@ -28,21 +28,23 @@ data_return <- function(x) {
     for (i in 1:length(links_list)) {
       link4download <- paste(append_link, links_list[i], sep='')
       #Make a temporary file (tf) and a temporary folder (tdir)
-      tf <- tempfile(tmpdir = tdir <- tempdir())
+      td <- tempdir()
+      # create a temporary file
+      tf <- tempfile(tmpdir=td, fileext=".zip")
       download.file(link4download, tf)
       file_names <- unzip(tf, list=TRUE) #list zip archive
       unzip(tf, exdir=td, overwrite=TRUE) #extract files from zip file
     }} else {
       print('Invalid input. Please enter a valid year between 1985 and 2022.')
     }
-  if (x ==2022){
-    name <- xmlToDataFrame(paste('RePORTER_PRJ_X_FY', toString(x), '_002.xml', sep=''))
-  }
-  if (x >= 1985 & x < 2020){
-    name <- xmlToDataFrame(paste('RePORTER_PRJ_X_FY', toString(x), '.xml', sep=''))
-  }
-  if (x == 2020){
-    name <- xmlToDataFrame(paste('RePORTER_PRJ_X_FY', toString(x), '_new.xml', sep=''))
+  if (x == 2021){ #multiple files in zip case
+    data_multiple <- lapply(file_names$Name, function(x) import(file.path(td, x)))
+    view(data)
+    unlink(td) #delete temp files/directories
+  } else { #one file in zip case
+    data <- import(file.path(td, file_names$Name[1]))
+    view(data)
+    unlink(td) #delete temp files/directories
   }
 }
 
