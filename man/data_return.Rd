@@ -11,13 +11,9 @@ data_return(x)
 }
 \value{
 A dataframe or multiple dataframes of funded NIH research opportunities relevant to the year input (x)
+
+#potential to pass a vector for Div III?
 }
 \description{
 data_return
-}
-\examples{
-data_return(1985)
-
-#potential to pass a vector for Div III?
-
 }
