@@ -1,6 +1,7 @@
 library(rvest)
 library(dplyr)
 library(XML)
+library(xml2)
 #' @export
 
 data_return <- function(x) {
