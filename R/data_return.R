@@ -30,7 +30,8 @@ data_return <- function(x) {
       #Make a temporary file (tf) and a temporary folder (tdir)
       tf <- tempfile(tmpdir = tdir <- tempdir())
       download.file(link4download, tf)
-      unzip(tf)
+      file_names <- unzip(tf, list=TRUE) #list zip archive
+      unzip(tf, exdir=td, overwrite=TRUE) #extract files from zip file
     }} else {
       print('Invalid input. Please enter a valid year between 1985 and 2022.')
     }
