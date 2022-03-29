@@ -2,7 +2,7 @@
 
 export(data_return)
 import(XML)
-import(dyplr)
+import(dplyr)
 import(rvest)
 import(xml2)
 importFrom(stats,filter)
