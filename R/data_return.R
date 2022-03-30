@@ -16,7 +16,7 @@
 #' @export
 
 data_return <- function(x) {
-  if (x >= 1985 & x < 2021){
+  if (x >= 1985 & x < 2023){
     nih <- read_html('https://exporter.nih.gov/ExPORTER_Catalog.aspx?sid=4&index=0')
     ahref <- nih %>% html_elements('a') %>% html_attr('href') #collect text in a href
     ahref_data <- data.frame(Col1=sapply(ahref, toString), stringsAsFactors = FALSE) #convert character to data frame to filter for desired links to files
