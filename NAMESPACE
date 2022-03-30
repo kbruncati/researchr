@@ -2,6 +2,7 @@
 
 export(data_return)
 import(dplyr)
+import(readr)
 import(rio)
 import(rvest)
 import(tibble)
