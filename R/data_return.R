@@ -12,6 +12,7 @@
 #' @importFrom utils unzip
 #' @import tibble
 #' @import rio
+#' @importFrom utils View
 #' @export
 
 data_return <- function(x) {
