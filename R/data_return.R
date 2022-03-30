@@ -34,17 +34,31 @@ data_return <- function(x) {
       unzip(tf, exdir=td, overwrite=TRUE) #extract files from zip file
     }
     if (x == 2021){ #multiple files in zip case
-      data_multiple <- lapply(file_names$Name, function(x) import(file.path(td, x)))
-      view(data)
+      data_2021 <- lapply(file_names$Name, function(x) import(file.path(td, x)))
       unlink(td) #delete temp files/directories
     } else { #one file in zip case
-      data <- import(file.path(td, file_names$Name[1]))
-      view(data)
+      data2 <- rio::import(file.path(td, file_names$Name[1]))
+
       unlink(td) #delete temp files/directories
+
+      #assign(paste0("data.", toString(x)), data2)
+      # i tried to change the name of the dataframe and to return it
+      # to the user, but it is a bit confusing to do...
+      # I tried to view data.1999, but the console said the object
+      # was not found
+
+      View(data2)
     }
     } else {
       print('Invalid input. Please enter a valid year between 1985 and 2022.')
     }
 }
 
-options(timeout=1000000) # timeout deafult problem fixed
+options(timeout=1000000) # timeout default problem fixed
+
+data_return(1999) # test
+
+
+
+
+
