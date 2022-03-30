@@ -23,9 +23,9 @@ data_return <- function(x) {
       html_attr('href') #collect text in a href
     ahref_data <- data.frame(Col1=sapply(ahref, toString), stringsAsFactors = FALSE) #convert character to data frame to filter for desired links to files
     all_links <- ahref_data %>%
-      dplyr::filter(grepl('XMLData/final/', Col1)) #use dplyr to filter for XML .zip files, now collected under links
+      filter(grepl('XMLData/final/', Col1)) #use dplyr to filter for XML .zip files, now collected under links
     selected_links <- all_links %>%
-      dplyr::filter(grepl(toString(x), Col1)) #filter for user input, x
+      filter(grepl(toString(x), Col1)) #filter for user input, x
     links_list <- as.list(selected_links$Col1)
     append_link <- "http://exporter.nih.gov/"
     for (i in 1:length(links_list)) {
