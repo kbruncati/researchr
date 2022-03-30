@@ -18,11 +18,15 @@
 data_return <- function(x) {
   if (x >= 1985 & x < 2023){
     nih <- read_html('https://exporter.nih.gov/ExPORTER_Catalog.aspx?sid=4&index=0')
-    ahref <- nih %>% html_elements('a') %>% html_attr('href') #collect text in a href
+    ahref <- nih %>%
+      html_elements('a') %>%
+      html_attr('href') #collect text in a href
     ahref_data <- data.frame(Col1=sapply(ahref, toString), stringsAsFactors = FALSE) #convert character to data frame to filter for desired links to files
-    all_links <- ahref_data %>% dplyr::filter(grepl('XMLData/final/', Col1)) #use dplyr to filter for XML .zip files, now collected under links
-    selected_links <- all_links %>% dplyr::filter(grepl(toString(x), Col1)) #filter for user input, x
-    links_list <- as.list(selected_links$Col1) #convert to list of zip files to loop through... gives me list with only one element??
+    all_links <- ahref_data %>%
+      dplyr::filter(grepl('XMLData/final/', Col1)) #use dplyr to filter for XML .zip files, now collected under links
+    selected_links <- all_links %>%
+      dplyr::filter(grepl(toString(x), Col1)) #filter for user input, x
+    links_list <- as.list(selected_links$Col1)
     append_link <- "http://exporter.nih.gov/"
     for (i in 1:length(links_list)) {
       link4download <- paste(append_link, links_list[i], sep='')
@@ -37,9 +41,11 @@ data_return <- function(x) {
     if (x == 2021){ #multiple files in zip case
       data_2021 <- lapply(file_names$Name, function(x) import(file.path(td, x)))
       unlink(td) #delete temp files/directories
+      data_2021 <- as.data.frame(data_2021)
+      return(data_2021)
     } else { #one file in zip case
-      data2 <- rio::import(file.path(td, file_names$Name[1]))
-
+      data <- rio::import(file.path(td, file_names$Name[1]))
+      assign(toString(x), data)
       unlink(td) #delete temp files/directories
 
       #assign(paste0("data.", toString(x)), data2)
@@ -48,16 +54,12 @@ data_return <- function(x) {
       # I tried to view data.1999, but the console said the object
       # was not found
 
-      View(data2)
+      #View(data2)
     }
-    } else {
-      print('Invalid input. Please enter a valid year between 1985 and 2022.')
-    }
+  } else {
+    print('Invalid input. Please enter a valid year between 1985 and 2022.')
+  }
 }
-
-options(timeout=1000000) # timeout default problem fixed
-
-#data_return(1999) # test
 
 
 
