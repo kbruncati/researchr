@@ -7,12 +7,10 @@
 data_return(x)
 }
 \arguments{
-\item{x}{a numeric vector containing a positive integer (year)}
+\item{x}{a numeric vector containing a positive integer (year) between 1985 - 2020}
 }
 \value{
-A dataframe or multiple dataframes of funded NIH research opportunities relevant to the year input (x)
-
-#potential to pass a vector for Div III?
+A dataframe of funded NIH research opportunities relevant to the year input (x)
 }
 \description{
 data_return

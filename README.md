@@ -20,7 +20,7 @@ You can install the development version of researchr like so:
 
 ``` r
 remotes::install_github('kbruncati/diviiproject')
-#> Skipping install of 'researchr' from a github remote, the SHA1 (f6d58abe) has not changed since last install.
+#> Skipping install of 'researchr' from a github remote, the SHA1 (d80c245a) has not changed since last install.
 #>   Use `force = TRUE` to force installation
 ```
 

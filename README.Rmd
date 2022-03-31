@@ -26,7 +26,7 @@ The goal of researchr is to make finding funded research opportunities easier an
 
 You can install the development version of researchr like so:
 
-``` {r}
+``` {r, message=FALSE}
 remotes::install_github('kbruncati/diviiproject')
 ```
 
