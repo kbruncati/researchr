@@ -56,8 +56,7 @@ data_return <- function(x) {
       # was not found
 
       #View(data2)
-    }
-  } else {
+    } else {
     print('Invalid input. Please enter a valid year between 1985 and 2022.')
   }
 
