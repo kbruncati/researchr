@@ -3,7 +3,6 @@
 export(data_return)
 import(data.table)
 import(dplyr)
-import(rio)
 import(rvest)
 import(tibble)
 importFrom(utils,View)
