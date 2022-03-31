@@ -12,7 +12,7 @@
 #' @importFrom utils unzip
 #' @import tibble
 #' @importFrom utils View
-#' @import data.table
+#' @importFrom data.table fread
 #' @export
 
 data_return <- function(x) {
