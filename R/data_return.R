@@ -16,7 +16,7 @@
 #' @export
 
 data_return <- function(x) {
-  if (x >= 1985 & x < 2023){
+  if (x >= 1985 & x < 2021){
     nih <- read_html('https://exporter.nih.gov/ExPORTER_Catalog.aspx?sid=4&index=0')
     ahref <- nih %>%
       html_elements('a') %>%
@@ -30,36 +30,15 @@ data_return <- function(x) {
     append_link <- "http://exporter.nih.gov/"
     for (i in 1:length(links_list)) {
       link4download <- paste(append_link, links_list[i], sep='')
-      #Make a temporary file (tf) and a temporary folder (tdir)
-      td <- tempdir()
-      # create a temporary file
-      tf <- tempfile()
+      td <- tempdir() #create a temporary directory
+      tf <- tempfile() #create a temporary file
       download.file(link4download, tf, quiet=TRUE, mode='wb')
-      #file_names <- unzip(tf, list=TRUE) #list zip archive
-      #unz(tf, paste('CSVs/final/RePORTER_PRJ_C_FY', toString(x), '.csv', sep='')) #extract files from zip file
       data2 <- data.table::fread(unzip(file.path(tf), exdir = td))
       data2 <- as.data.frame(data2)
       return(data2)
     }
-    # if (x == 2021){ #multiple files in zip case
-    #   data_2021 <- lapply(file_names$Name, function(x) import(file.path(td, x)))
-    #   unlink(td) #delete temp files/directories
-    #   data_2021 <- as.data.frame(data_2021)
-    #   return(data_2021)
-    # } else { #one file in zip case
-    #   data <- rio::import(file.path(td, file_names$Name[1]))
-    #   assign(toString(x), data)
-    #   unlink(td) #delete temp files/directories
-
-      #assign(paste0("data.", toString(x)), data2)
-      # i tried to change the name of the dataframe and to return it
-      # to the user, but it is a bit confusing to do...
-      # I tried to view data.1999, but the console said the object
-      # was not found
-
-      #View(data2)
-    } else {
-    print('Invalid input. Please enter a valid year between 1985 and 2022.')
+  } else {
+    print('Invalid input. Please enter a valid year between 1985 and 2020.')
   }
 }
 
