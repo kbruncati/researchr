@@ -11,7 +11,6 @@
 #' @importFrom utils download.file
 #' @importFrom utils unzip
 #' @import tibble
-#' @import rio
 #' @importFrom utils View
 #' @import data.table
 #' @export
