@@ -13,6 +13,7 @@
 #' @import tibble
 #' @import rio
 #' @importFrom utils View
+#' @import data.table
 #' @export
 
 data_return <- function(x) {
