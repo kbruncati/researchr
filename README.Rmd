@@ -24,9 +24,9 @@ The goal of researchr is to make finding funded research opportunities easier an
 
 ## Installation
 
-You can install the development version of researchr like so:
+You can install researchr like so:
 
-``` {r, message=FALSE}
+```
 remotes::install_github('kbruncati/diviiproject')
 ```
 
@@ -36,5 +36,9 @@ This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
 library(researchr)
-## basic example code
+## basic example code - put something here showing what data_return does I guess
 ```
+
+## Authors
+
+Benjamin Bruncati and Hongtong Lin

@@ -16,12 +16,20 @@ easier and more accessible for all.
 
 ## Installation
 
-You can install the development version of researchr like so:
+You can install researchr like so:
 
 ``` r
 remotes::install_github('kbruncati/diviiproject')
-#> Skipping install of 'researchr' from a github remote, the SHA1 (d80c245a) has not changed since last install.
-#>   Use `force = TRUE` to force installation
+#> 
+#> * checking for file ‘/tmp/Rtmpc2PRaa/remotes2d7df766926d92/kbruncati-diviiproject-7ee8e02/DESCRIPTION’ ... OK
+#> * preparing ‘researchr’:
+#> * checking DESCRIPTION meta-information ... OK
+#> * checking for LF line-endings in source and make files and shell scripts
+#> * checking for empty or unneeded directories
+#> * building ‘researchr_0.0.0.1000.tar.gz’
+#> Warning in sprintf(gettext(fmt, domain = domain), ...) :
+#>   one argument not used by format 'invalid uid value replaced by that for user 'nobody''
+#> Warning: invalid uid value replaced by that for user 'nobody'
 ```
 
 ## Example
@@ -30,5 +38,9 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(researchr)
-## basic example code
+## basic example code - put something here showing what data_return does I guess
 ```
+
+## Authors
+
+Benjamin Bruncati and Hongtong Lin
