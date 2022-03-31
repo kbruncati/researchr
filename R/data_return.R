@@ -38,8 +38,8 @@ data_return <- function(x) {
       #file_names <- unzip(tf, list=TRUE) #list zip archive
       #unz(tf, paste('CSVs/final/RePORTER_PRJ_C_FY', toString(x), '.csv', sep='')) #extract files from zip file
       data <- data.table::fread(unzip(file.path(tf), exdir = td))
-      data <- as.data.frame(data)
-      View(data)
+      data2 <- as.data.frame(data)
+      View(data2)
     }
     # if (x == 2021){ #multiple files in zip case
     #   data_2021 <- lapply(file_names$Name, function(x) import(file.path(td, x)))
