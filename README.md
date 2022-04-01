@@ -31,7 +31,7 @@ class(researchr::data_return(2002))
 #> [1] "data.frame"
 ncol(researchr::data_return(1999))  
 #> [1] 42
-colnames(researchr::data_return(1999))[2:42]
+colnames(researchr::data_return(1999))[-1] # there's no column 1 in the dataframe
 #>  [1] "ACTIVITY"               "ADMINISTERING_IC"       "APPLICATION_TYPE"      
 #>  [4] "ARRA_FUNDED"            "AWARD_NOTICE_DATE"      "BUDGET_START"          
 #>  [7] "BUDGET_END"             "CFDA_CODE"              "CORE_PROJECT_NUM"      

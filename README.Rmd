@@ -41,7 +41,7 @@ class(researchr::data_return(2002))
 
 ncol(researchr::data_return(1999))  
 
-colnames(researchr::data_return(1999))[2:42]
+colnames(researchr::data_return(1999))[-1] # there's no column 1 in the dataframe
 
 researchr::data_return("a")
 
