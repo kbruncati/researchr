@@ -13,9 +13,9 @@ status](https://www.r-pkg.org/badges/version/kbruncati)](https://CRAN.R-project.
 
 The goal of researchr is to make finding information about funded
 research opportunities easier and more accessible. This package takes a
-year as an input and will return information on funded NIH research
-opportunities from that year. Details include PIs, location, department,
-and much more.
+year as an input and will return a dataframe of information on funded
+NIH research opportunities from that year. Details include PIs,
+location, department, and much more.
 
 ## Installation
 
