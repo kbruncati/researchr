@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 [![CRAN status](https://www.r-pkg.org/badges/version/kbruncati)](https://CRAN.R-project.org/package=researchr)
 <!-- badges: end -->
 
-The goal of researchr is to make finding funded research opportunities easier and more accessible for all. 
+The goal of researchr is to make finding information about funded research opportunities easier and more accessible. This package takes a year as an input and will return information on funded NIH research opportunities from that year. Details include PIs, location, department, and much more.  
 
 ## Installation
 
@@ -32,16 +32,16 @@ remotes::install_github('kbruncati/diviiproject')
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+Here are some basic examples to show what `data_return` returns to the user, as well as some "error" examples:
 
 ```{r example}
 library(researchr)
-## basic example code
+
 class(researchr::data_return(2002))
 
 ncol(researchr::data_return(1999))  
 
-colnames(researchr::data_return(1999))[-1] # there's no column 1 in the dataframe
+colnames(researchr::data_return(1999))[-1] 
 
 researchr::data_return("a")
 

@@ -11,8 +11,11 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 status](https://www.r-pkg.org/badges/version/kbruncati)](https://CRAN.R-project.org/package=researchr)
 <!-- badges: end -->
 
-The goal of researchr is to make finding funded research opportunities
-easier and more accessible for all.
+The goal of researchr is to make finding information about funded
+research opportunities easier and more accessible. This package takes a
+year as an input and will return information on funded NIH research
+opportunities from that year. Details include PIs, location, department,
+and much more.
 
 ## Installation
 
@@ -22,16 +25,19 @@ You can install researchr like so:
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+Here are some basic examples to show what `data_return` returns to the
+user, as well as some “error” examples:
 
 ``` r
 library(researchr)
-## basic example code
+
 class(researchr::data_return(2002))
 #> [1] "data.frame"
+
 ncol(researchr::data_return(1999))  
 #> [1] 42
-colnames(researchr::data_return(1999))[-1] # there's no column 1 in the dataframe
+
+colnames(researchr::data_return(1999))[-1] 
 #>  [1] "ACTIVITY"               "ADMINISTERING_IC"       "APPLICATION_TYPE"      
 #>  [4] "ARRA_FUNDED"            "AWARD_NOTICE_DATE"      "BUDGET_START"          
 #>  [7] "BUDGET_END"             "CFDA_CODE"              "CORE_PROJECT_NUM"      
@@ -46,8 +52,10 @@ colnames(researchr::data_return(1999))[-1] # there's no column 1 in the datafram
 #> [34] "SERIAL_NUMBER"          "STUDY_SECTION"          "STUDY_SECTION_NAME"    
 #> [37] "SUBPROJECT_ID"          "SUFFIX"                 "SUPPORT_YEAR"          
 #> [40] "TOTAL_COST"             "TOTAL_COST_SUB_PROJECT"
+
 researchr::data_return("a")
 #> [1] "Invalid input. Please enter a valid year between 1985 and 2020."
+
 researchr::data_return(1805)
 #> [1] "Invalid input. Please enter a valid year between 1985 and 2020."
 ```
