@@ -36,7 +36,16 @@ This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
 library(researchr)
-## basic example code - put something here showing what data_return does I guess
+## basic example code
+class(researchr::data_return(2002))
+
+ncol(researchr::data_return(1999))  
+
+colnames(researchr::data_return(1999))[-1] # there's no column 1 in the dataframe
+
+researchr::data_return("a")
+
+researchr::data_return(1805)
 ```
 
 ## Authors
