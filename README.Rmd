@@ -1,5 +1,5 @@
 ---
-output: md_document
+output: github_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -37,8 +37,11 @@ This is a basic example which shows you how to solve a common problem:
 ```{r example}
 library(researchr)
 ## basic example code
+class(researchr::data_return(2002))
 
-head(researchr::data_return(1999))
+ncol(researchr::data_return(1999))  
+
+colnames(researchr::data_return(1999))[2:42]
 
 researchr::data_return("a")
 
