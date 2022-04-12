@@ -30,21 +30,20 @@ data_return <- function(x) {
 
     for (i in 1:length(year)) {
       fileld <- 2*which(year == x) # the pattern of urls
-      link4download <- paste0(append_link, 2) #string concatenation
+      link4download <- paste0(append_link, fileld) #string concatenation
+      message(link4download)
       td <- tempdir() #create a temporary directory
       tf <- tempfile() #create a temporary file
       download.file(link4download, tf, quiet=TRUE, mode='wb') #download file with temp file as dest file
-      data2 <- data.table::fread(unzip(file.path(tf), exdir = td), guess = 100000)
-      #unzip temp file, convert .csv
-      #data2 <- as.data.frame(data2) #make final product - data frame
+      path <- unzip(file.path(tf), exdir = td)
+      message(path)
+      data2 <- readr::read_csv(path)
       return(data2) #return requested data to the user for relevant year
     }
   } else { #user inputs an unavailable year or something entirely unrelated
     print('Invalid input. Please enter a valid year between 1985 and 2020.')
   }
 }
-
-
 
 
 
