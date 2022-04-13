@@ -16,11 +16,11 @@
 
 data_return <- function(x) {
   if (x >= 1985 & x < 2021){
-    nih <- read_html('https://reporter.nih.gov/exporter') #link to scrape with rvest
-    ahref <- nih %>%
-      html_elements('a') %>%
-      html_attr('href') #collect text in a href - where desired .zip file links are
-    ahref_data <- data.frame(Col1=sapply(ahref, toString), stringsAsFactors = FALSE) #convert character to data frame to filter for desired links to files
+    # nih <- read_html('https://reporter.nih.gov/exporter') #link to scrape with rvest
+    # ahref <- nih %>%
+    #   html_elements('a') %>%
+    #   html_attr('href') #collect text in a href - where desired .zip file links are
+    # ahref_data <- data.frame(Col1=sapply(ahref, toString), stringsAsFactors = FALSE) #convert character to data frame to filter for desired links to files
     #all_links <- ahref_data %>%
     # filter(grepl('CSVs/final/RePORTER_PRJ_C', Col1)) #use dplyr to filter for XML .zip files, now collected under links
     #selected_links <- all_links %>%
