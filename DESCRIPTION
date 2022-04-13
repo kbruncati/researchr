@@ -20,4 +20,5 @@ Imports:
   stats, 
   utils, 
   tibble, 
-  data.table  
+  data.table,
+  readr
