@@ -1,4 +1,4 @@
-#' data_return
+#' nih_research
 #' @name data_return
 #' @param x a numeric vector containing a positive integer (year) between 1985 - 2020
 #' @usage data_return(x)
@@ -14,7 +14,7 @@
 #' @importFrom readr read_csv
 #' @export
 
-data_return <- function(x) {
+nih_research <- function(x) {
   if (x >= 1985 & x < 2021){
     # nih <- read_html('https://reporter.nih.gov/exporter') #link to scrape with rvest
     # ahref <- nih %>%
