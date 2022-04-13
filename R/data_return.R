@@ -41,7 +41,7 @@ data_return <- function(x) {
       return(data2) #return requested data to the user for relevant year
     }
   } else { #user inputs an unavailable year or something entirely unrelated
-    print('Invalid input. Please enter a valid year between 1985 and 2020.')
+    stop('Invalid input. Please enter a valid year between 1985 and 2020.')
   }
 }
 
