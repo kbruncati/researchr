@@ -11,6 +11,7 @@
 #' @import tibble
 #' @importFrom utils View
 #' @importFrom data.table fread
+#' @importFrom readr read_csv
 #' @export
 
 data_return <- function(x) {
