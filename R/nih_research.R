@@ -1,8 +1,8 @@
 #' nih_research
 #' @name nih_research
-#' @param x a numeric vector containing a positive integer (year) between 1985 - 2020
-#' @usage nih_research(x)
-#' @return A dataframe of funded NIH research opportunities relevant to the year input (x)
+#' @param year a numeric vector containing a positive integer (year) between 1985 - 2020
+#' @usage nih_research(year)
+#' @return A dataframe of funded NIH research opportunities relevant to the year input (year)
 #'
 #' @import rvest
 #' @import dplyr

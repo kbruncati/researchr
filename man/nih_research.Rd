@@ -4,7 +4,7 @@
 \alias{nih_research}
 \title{nih_research}
 \usage{
-data_return(x)
+nih_research(x)
 }
 \arguments{
 \item{x}{a numeric vector containing a positive integer (year) between 1985 - 2020}
