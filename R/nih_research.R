@@ -43,7 +43,7 @@ nih_research <- function(year) {
     data2 <- readr::read_csv(path)
     return(data2) #return requested data to the user for relevant year
   } else { #user inputs an unavailable year or something entirely unrelated
-    stop('Invalid input. Please enter a valid year between 1985 and 2020.')
+    stop('Invalid input. Please enter a valid year between 1985 and 2021.')
   }
 }
 
