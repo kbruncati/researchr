@@ -37,15 +37,15 @@ Here are some basic examples to show what `data_return` returns to the user, as 
 ```{r example}
 library(researchr)
 
-class(researchr::nih_research(2002))
+class(nih_research(2002))
 
-ncol(researchr::nih_research(1999))  
+ncol(nih_research(1999))  
 
-colnames(researchr::nih_research(1999))[-1] 
+colnames(nih_research(1999))[-1] 
 
-researchr::nih_research("a")
+#nih_research("a")
 
-researchr::nih_research(1805)
+#nih_research(1805)
 ```
 
 ## Authors

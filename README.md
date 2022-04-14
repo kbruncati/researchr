@@ -31,13 +31,45 @@ user, as well as some “error” examples:
 ``` r
 library(researchr)
 
-class(researchr::data_return(2002))
-#> [1] "data.frame"
+class(nih_research(2002))
+#> https://reporter.nih.gov/services/exporter/Download?fileId=36
+#> /tmp/RtmpjlbQbg/RePORTER_PRJ_C_FY2002.csv
+#> Rows: 83423 Columns: 42
+#> ── Column specification ────────────────────────────────────────────────────────
+#> Delimiter: ","
+#> chr  (30): ACTIVITY, ADMINISTERING_IC, BUDGET_START, BUDGET_END, CORE_PROJEC...
+#> dbl   (8): APPLICATION_ID, APPLICATION_TYPE, CFDA_CODE, FY, SERIAL_NUMBER, S...
+#> lgl   (3): ARRA_FUNDED, NIH_SPENDING_CATS, PHR
+#> dttm  (1): AWARD_NOTICE_DATE
+#> 
+#> ℹ Use `spec()` to retrieve the full column specification for this data.
+#> ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+#> [1] "spec_tbl_df" "tbl_df"      "tbl"         "data.frame"
 
-ncol(researchr::data_return(1999))  
+ncol(nih_research(1999))  
+#> https://reporter.nih.gov/services/exporter/Download?fileId=30
+#> /tmp/RtmpjlbQbg/RePORTER_PRJ_C_FY1999.csv
+#> Rows: 80081 Columns: 42── Column specification ────────────────────────────────────────────────────────
+#> Delimiter: ","
+#> chr  (29): ACTIVITY, ADMINISTERING_IC, BUDGET_START, BUDGET_END, CORE_PROJEC...
+#> dbl   (6): APPLICATION_ID, APPLICATION_TYPE, CFDA_CODE, FY, SERIAL_NUMBER, S...
+#> lgl   (6): ARRA_FUNDED, FUNDING_ICs, NIH_SPENDING_CATS, PHR, TOTAL_COST, TOT...
+#> dttm  (1): AWARD_NOTICE_DATE
+#> ℹ Use `spec()` to retrieve the full column specification for this data.
+#> ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 #> [1] 42
 
-colnames(researchr::data_return(1999))[-1] 
+colnames(nih_research(1999))[-1] 
+#> https://reporter.nih.gov/services/exporter/Download?fileId=30
+#> /tmp/RtmpjlbQbg/RePORTER_PRJ_C_FY1999.csv
+#> Rows: 80081 Columns: 42── Column specification ────────────────────────────────────────────────────────
+#> Delimiter: ","
+#> chr  (29): ACTIVITY, ADMINISTERING_IC, BUDGET_START, BUDGET_END, CORE_PROJEC...
+#> dbl   (6): APPLICATION_ID, APPLICATION_TYPE, CFDA_CODE, FY, SERIAL_NUMBER, S...
+#> lgl   (6): ARRA_FUNDED, FUNDING_ICs, NIH_SPENDING_CATS, PHR, TOTAL_COST, TOT...
+#> dttm  (1): AWARD_NOTICE_DATE
+#> ℹ Use `spec()` to retrieve the full column specification for this data.
+#> ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 #>  [1] "ACTIVITY"               "ADMINISTERING_IC"       "APPLICATION_TYPE"      
 #>  [4] "ARRA_FUNDED"            "AWARD_NOTICE_DATE"      "BUDGET_START"          
 #>  [7] "BUDGET_END"             "CFDA_CODE"              "CORE_PROJECT_NUM"      
@@ -53,11 +85,9 @@ colnames(researchr::data_return(1999))[-1]
 #> [37] "SUBPROJECT_ID"          "SUFFIX"                 "SUPPORT_YEAR"          
 #> [40] "TOTAL_COST"             "TOTAL_COST_SUB_PROJECT"
 
-researchr::data_return("a")
-#> [1] "Invalid input. Please enter a valid year between 1985 and 2020."
+#nih_research("a")
 
-researchr::data_return(1805)
-#> [1] "Invalid input. Please enter a valid year between 1985 and 2020."
+#nih_research(1805)
 ```
 
 ## Authors
