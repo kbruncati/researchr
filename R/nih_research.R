@@ -4,11 +4,6 @@
 #' @usage nih_research(year)
 #' @return A dataframe of funded NIH research opportunities relevant to the year input (year)
 #'
-#' @name median_total_cost
-#' @param your_dataFrame an nih exporter data frame extracted by the nih_research function
-#' @usage median_total_cost(your_dataFrame)
-#' @return An interactive bar graph: the median total cost v.s the number of support year
-#'
 #' @import rvest
 #' @import dplyr
 #' @importFrom utils download.file
