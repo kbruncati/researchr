@@ -3,7 +3,8 @@ Title: NIH Research Database
 Version: 0.0.0.1000
 Authors@R: 
     person("Benjamin", "Bruncati", , "kbruncati@github.com", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0001-8545-5984"))
+           comment = c(ORCID = "0000-0001-8545-5984")),
+    person("Hongtong", "Lin", "hongtonglin@github.com", role = "ctb")
 Description: 
     This package allows the user to navigate funded research opportunities, both past and present,
     of the NIH. Files are collected, downloaded, and read depending on which ones the user requests. 
@@ -23,4 +24,4 @@ Imports:
   data.table,
   readr,
   ggplot2,
-  plotly 
+  plotly
