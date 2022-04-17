@@ -42,10 +42,6 @@ class(nih_research(2002))
 ncol(nih_research(1999))  
 
 colnames(nih_research(1999))[-1] 
-
-#nih_research("a")
-
-#nih_research(1805)
 ```
 
 ## Authors

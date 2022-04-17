@@ -33,7 +33,7 @@ library(researchr)
 
 class(nih_research(2002))
 #> https://reporter.nih.gov/services/exporter/Download?fileId=36
-#> /tmp/RtmpjlbQbg/RePORTER_PRJ_C_FY2002.csv
+#> /tmp/Rtmp8VaGxu/RePORTER_PRJ_C_FY2002.csv
 #> Rows: 83423 Columns: 42
 #> ── Column specification ────────────────────────────────────────────────────────
 #> Delimiter: ","
@@ -48,7 +48,7 @@ class(nih_research(2002))
 
 ncol(nih_research(1999))  
 #> https://reporter.nih.gov/services/exporter/Download?fileId=30
-#> /tmp/RtmpjlbQbg/RePORTER_PRJ_C_FY1999.csv
+#> /tmp/Rtmp8VaGxu/RePORTER_PRJ_C_FY1999.csv
 #> Rows: 80081 Columns: 42── Column specification ────────────────────────────────────────────────────────
 #> Delimiter: ","
 #> chr  (29): ACTIVITY, ADMINISTERING_IC, BUDGET_START, BUDGET_END, CORE_PROJEC...
@@ -61,7 +61,7 @@ ncol(nih_research(1999))
 
 colnames(nih_research(1999))[-1] 
 #> https://reporter.nih.gov/services/exporter/Download?fileId=30
-#> /tmp/RtmpjlbQbg/RePORTER_PRJ_C_FY1999.csv
+#> /tmp/Rtmp8VaGxu/RePORTER_PRJ_C_FY1999.csv
 #> Rows: 80081 Columns: 42── Column specification ────────────────────────────────────────────────────────
 #> Delimiter: ","
 #> chr  (29): ACTIVITY, ADMINISTERING_IC, BUDGET_START, BUDGET_END, CORE_PROJEC...
@@ -84,10 +84,6 @@ colnames(nih_research(1999))[-1]
 #> [34] "SERIAL_NUMBER"          "STUDY_SECTION"          "STUDY_SECTION_NAME"    
 #> [37] "SUBPROJECT_ID"          "SUFFIX"                 "SUPPORT_YEAR"          
 #> [40] "TOTAL_COST"             "TOTAL_COST_SUB_PROJECT"
-
-#nih_research("a")
-
-#nih_research(1805)
 ```
 
 ## Authors
