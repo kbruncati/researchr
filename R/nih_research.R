@@ -4,6 +4,11 @@
 #' @usage nih_research(year)
 #' @return A dataframe of funded NIH research opportunities relevant to the year input (year)
 #'
+#' @name median_total_cost
+#' @param your_dataFrame an nih exporter data frame extracted by the nih_research function
+#' @usage median_total_cost(your_dataFrame)
+#' @return An interactive bar graph: the median total cost v.s the number of support year
+#'
 #' @import rvest
 #' @import dplyr
 #' @importFrom utils download.file
@@ -12,6 +17,8 @@
 #' @importFrom utils View
 #' @importFrom data.table fread
 #' @importFrom readr read_csv
+#' @importFrom ggplot2
+#' @importFrom plotly
 #' @export
 
 nih_research <- function(year) {
@@ -45,8 +52,29 @@ nih_research <- function(year) {
   } else { #user inputs an unavailable year or something entirely unrelated
     stop('Invalid input. Please enter a valid year between 1985 and 2021.')
   }
+
 }
 
+median_total_cost <- function(your_dataFrame){
+  data3 <- your_dataFrame %>%
+    select(c(SUPPORT_YEAR, TOTAL_COST)) # filter the data frame
+
+  data3.graph <- ggplot2::ggplot(data = data3, aes(x = SUPPORT_YEAR), y = median(TOTAL_COST)) +
+    geom_bar() +
+    xlab("the number of support year") +
+    ylab("median cost") +
+    ggtitle(paste0(("The median total cost corresponding to the number of support year in "), 2001))
+  # plot out the bar graphs:
+
+  data3.interactiveGraph <- plotly::ggplotly(data3.graph) # make the graph more interactive
+
+  data3.interactiveGraph%>%
+    plotly::layout(
+      xaxis = list(
+        dtick = 10,
+        tick0 = 0,
+        tickmode = "linear")) # modify the ticks
+}
 
 
 
