@@ -21,4 +21,6 @@ Imports:
   utils, 
   tibble, 
   data.table,
-  readr
+  readr,
+  ggplot2,
+  plotly 
