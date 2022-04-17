@@ -55,26 +55,6 @@ nih_research <- function(year) {
 
 }
 
-median_total_cost <- function(your_dataFrame){
-  data3 <- your_dataFrame %>%
-    select(c(SUPPORT_YEAR, TOTAL_COST)) # filter the data frame
-
-  data3.graph <- ggplot2::ggplot(data = data3, aes(x = SUPPORT_YEAR), y = median(TOTAL_COST)) +
-    geom_bar() +
-    xlab("the number of support year") +
-    ylab("median cost") +
-    ggtitle(paste0(("The median total cost corresponding to the number of support year in "), 2001))
-  # plot out the bar graphs:
-
-  data3.interactiveGraph <- plotly::ggplotly(data3.graph) # make the graph more interactive
-
-  data3.interactiveGraph%>%
-    plotly::layout(
-      xaxis = list(
-        dtick = 10,
-        tick0 = 0,
-        tickmode = "linear")) # modify the ticks
-}
 
 
 
