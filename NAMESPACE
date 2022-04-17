@@ -3,7 +3,7 @@
 export(median_total_cost)
 export(nih_research)
 import(dplyr)
-import(utils)
 import(ggplot2)
 import(plotly)
+import(utils)
 importFrom(readr,read_csv)

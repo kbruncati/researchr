@@ -2,9 +2,14 @@ Package: researchr
 Title: NIH Research Database
 Version: 0.0.0.1000
 Authors@R: 
-    person("Benjamin", "Bruncati", , "kbruncati@github.com", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0001-8545-5984")),
-    person("Hongtong", "Lin", "hongtonglin@github.com", role = "ctb")
+  c(person(given = "Benjamin",
+           family = "Bruncati",
+           role = c("aut", "cre"),
+           email = "kbruncati@github.com"),
+           person(given = "Hongtong",
+            family = "Lin",
+            role = c("aut"),
+            email = "hongtonglin@github.com"))
 Description: 
     This package allows the user to navigate funded research opportunities, both past and present,
     of the NIH. Files are collected, downloaded, and read depending on which ones the user requests. 
