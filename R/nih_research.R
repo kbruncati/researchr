@@ -4,16 +4,9 @@
 #' @usage nih_research(year)
 #' @return A dataframe of funded NIH research opportunities relevant to the year input (year)
 #'
-#' @import rvest
 #' @import dplyr
-#' @importFrom utils download.file
-#' @importFrom utils unzip
-#' @import tibble
-#' @importFrom utils View
-#' @importFrom data.table fread
+#' @import utils
 #' @importFrom readr read_csv
-#' @importFrom ggplot2
-#' @importFrom plotly
 #' @export
 
 nih_research <- function(year) {
@@ -30,7 +23,7 @@ nih_research <- function(year) {
       download.file(link4download, tf, quiet=TRUE, mode='wb') #download file with temp file as dest file
       path <- unzip(file.path(tf), exdir = td)
       message(path)
-      data2 <- readr::read_csv(path)
+      data2 <- read_csv(path)
       return(data2) #return requested data to the user for relevant year
     }
   } else if (year == 2021){
@@ -42,7 +35,7 @@ nih_research <- function(year) {
     download.file(link4download, tf, quiet=TRUE, mode='wb') #download file with temp file as dest file
     path <- unzip(file.path(tf), exdir = td)
     message(path)
-    data2 <- readr::read_csv(path)
+    data2 <- read_csv(path)
     return(data2) #return requested data to the user for relevant year
   } else { #user inputs an unavailable year or something entirely unrelated
     stop('Invalid input. Please enter a valid year between 1985 and 2021.')

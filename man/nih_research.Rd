@@ -7,7 +7,7 @@
 nih_research(year)
 }
 \arguments{
-\item{year}{a numeric vector containing a positive integer (year) between 1985 - 2020}
+\item{year}{a numeric vector containing a positive integer (year) between 1985 - 2021}
 }
 \value{
 A dataframe of funded NIH research opportunities relevant to the year input (year)

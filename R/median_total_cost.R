@@ -6,9 +6,9 @@
 #' @return An interactive bar graph: the median total cost v.s the number of support year
 #'
 #' @import dplyr
-#' @importFrom utils View
-#' @importFrom ggplot2
-#' @importFrom plotly
+#' @import utils
+#' @import ggplot2
+#' @import plotly
 #' @export
 
 median_total_cost <- function(your_dataFrame){
