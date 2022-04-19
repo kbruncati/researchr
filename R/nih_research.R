@@ -14,7 +14,7 @@ nih_research <- function(year) {
   if (year >= 1985 & year < 2021){
     year_list <- 1985:2020 # make a list of years
 
-    for (i in 1:length(year_list)) { #PROBLEM: seems like this was repeating the same action over and over
+    for (i in 1:length(year_list)) {
       fileld <- 2*which(year_list == year) # the pattern of urls
       link4download <- paste0(append_link, fileld) #string concatenation
       message(link4download)
