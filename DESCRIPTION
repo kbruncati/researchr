@@ -25,5 +25,6 @@ Imports:
   utils, 
   readr,
   ggplot2,
-  plotly
+  plotly,
+  stats
 VignetteBuilder: knitr

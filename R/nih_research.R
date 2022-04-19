@@ -23,6 +23,7 @@ nih_research <- function(year) {
       download.file(link4download, tf, quiet=TRUE, mode='wb') #download file with temp file as dest file
       path <- unzip(file.path(tf), exdir = td)
       message(path)
+      data2 <- read_csv(path)
       data2 <<- read_csv(path)
       return(data2) #return requested data to the user for relevant year
     }
@@ -35,6 +36,7 @@ nih_research <- function(year) {
     download.file(link4download, tf, quiet=TRUE, mode='wb') #download file with temp file as dest file
     path <- unzip(file.path(tf), exdir = td)
     message(path)
+    data2 <- read_csv(path)
     data2 <<- read_csv(path)
     return(data2) #return requested data to the user for relevant year
   } else { #user inputs an unavailable year or something entirely unrelated

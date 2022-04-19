@@ -9,6 +9,7 @@
 #' @import utils
 #' @import ggplot2
 #' @import plotly
+#' @importFrom stats median
 #' @export
 
 median_total_cost <- function(your_dataFrame){
