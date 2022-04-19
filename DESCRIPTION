@@ -26,3 +26,4 @@ Imports:
   readr,
   ggplot2,
   plotly
+VignetteBuilder: knitr
