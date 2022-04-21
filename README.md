@@ -25,7 +25,7 @@ You can install researchr like so:
 
 ## Example
 
-Here are some basic examples to show what `data_return` returns to the
+Here are some basic examples to show what `nih_research` returns to the
 user:
 
 ``` r
@@ -35,7 +35,7 @@ library(researchr)
 
 class(nih_research(2002))
 #> https://reporter.nih.gov/services/exporter/Download?fileId=36
-#> /tmp/RtmpmufL0P/RePORTER_PRJ_C_FY2002.csv
+#> /tmp/Rtmpmlczbx/RePORTER_PRJ_C_FY2002.csv
 #> Rows: 83423 Columns: 42
 #> ── Column specification ────────────────────────────────────────────────────────
 #> Delimiter: ","
@@ -60,7 +60,7 @@ class(nih_research(2002))
 
 ncol(nih_research(1999))  
 #> https://reporter.nih.gov/services/exporter/Download?fileId=30
-#> /tmp/RtmpmufL0P/RePORTER_PRJ_C_FY1999.csv
+#> /tmp/Rtmpmlczbx/RePORTER_PRJ_C_FY1999.csv
 #> Rows: 80081 Columns: 42── Column specification ────────────────────────────────────────────────────────
 #> Delimiter: ","
 #> chr  (29): ACTIVITY, ADMINISTERING_IC, BUDGET_START, BUDGET_END, CORE_PROJEC...
@@ -80,7 +80,7 @@ ncol(nih_research(1999))
 
 colnames(nih_research(1999))[-1] 
 #> https://reporter.nih.gov/services/exporter/Download?fileId=30
-#> /tmp/RtmpmufL0P/RePORTER_PRJ_C_FY1999.csv
+#> /tmp/Rtmpmlczbx/RePORTER_PRJ_C_FY1999.csv
 #> Rows: 80081 Columns: 42── Column specification ────────────────────────────────────────────────────────
 #> Delimiter: ","
 #> chr  (29): ACTIVITY, ADMINISTERING_IC, BUDGET_START, BUDGET_END, CORE_PROJEC...
