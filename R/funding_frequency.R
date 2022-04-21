@@ -15,7 +15,7 @@
 
 funding_frequency <- function(data_frame){
   wd <- getwd()
-  states <- sf::read_sf(paste0(wd, "/cb_2020_us_state_20m/cb_2020_us_state_20m.shp"))
+  states <- sf::read_sf(paste0(wd, "/data/cb_2020_us_state_20m.shp"))
 
   data4 <- table(data_frame$ORG_STATE)
   data4 <- as.data.frame(data4)
