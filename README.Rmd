@@ -30,9 +30,9 @@ You can install researchr like so:
 remotes::install_github('kbruncati/diviiproject')
 ```
 
-## Example
+## Data Examples
 
-Here are some basic examples to show what `nih_research` returns to the user:
+Here are some basic examples to show what data `nih_research` returns to the user:
 
 ```{r example}
 library(researchr)
@@ -47,6 +47,16 @@ colnames(nih_research(1999))[-1]
 ## ExPORTER Data Dictionary
 
 If you need more information on a column in your NIH Research dataset, check out the [ExPORTER Data Dictionary](https://report.nih.gov/exporter-data-dictionary).
+
+##Visualization Examples
+#median_total_cost
+
+Here is a sample data visualization that `median_total_cost` returns to the user:
+
+```{r example}
+library(researchr)
+median_total_cost(data2)
+```
 
 ## Authors
 
