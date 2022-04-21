@@ -1,7 +1,7 @@
 #' funding_frequency
 #'
 #' @name funding_frequency
-#' @param data_frame 2020 US State data saved within the package
+#' @param data_frame data of NIH research opportunities for year selected by user
 #' @usage funding_frequency(data_frame)
 #' @return an interactive graph of funding frequency by state
 #'
