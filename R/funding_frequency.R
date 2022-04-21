@@ -16,8 +16,8 @@ funding_frequency <- function(data_frame){
 
   g <- ggplot(states.map) +
     geom_sf(aes(fill=frequency)) +
-    scale_fill_distiller("a", palette="Spectral") +
-    ggtitle("Water by State")
+    scale_fill_distiller("the number of times each state got funded", palette="Spectral") +
+    ggtitle("Funding Frequency by State")
 
 
   pp <- plotly::ggplotly(g)
