@@ -3,7 +3,7 @@
 #' @name funding_frequency
 #' @param data_frame 2020 US State data saved within the package
 #' @usage funding_frequency(data_frame)
-#' @return a graph of funding frequency by state (2020)
+#' @return a graph of funding frequency by state
 #'
 #' @import dplyr
 #' @import utils

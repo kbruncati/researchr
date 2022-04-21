@@ -48,7 +48,7 @@ median_total_cost(data2)
 
 ###Funding Wars
 
-`funding_frequency` creates a data visualization based on 2020 data to show how frequently a state has received NIH funding. 
+`funding_frequency` creates a data visualization based to show how frequently a state has received NIH funding during the selected year. 
 
 ```{r}
 #funding_frequency(data4)
