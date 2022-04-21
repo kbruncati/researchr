@@ -1,5 +1,6 @@
 ---
 output: github_document
+always_allow_html: yes
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -45,8 +46,7 @@ colnames(nih_research(1999))
 
 If you need more information on a column in your NIH Research dataset, check out the [ExPORTER Data Dictionary](https://report.nih.gov/exporter-data-dictionary).
 
-##Visualization Examples
-###median_total_cost
+## Visualization Examples
 
 Here is a sample interactive data visualization posing median total project costs against length of funding for 1999:
 
@@ -54,12 +54,10 @@ Here is a sample interactive data visualization posing median total project cost
 median_total_cost(data2)
 ```
 
-###funding_frequency
-
 Here is another interactive data visualization that shows frequency of funding by state for 1999:
 
 ```{r}
-funding_frequency(data2)
+#funding_frequency(data2) this doesnt currently work for some reason...
 ```
 
 ## Authors
