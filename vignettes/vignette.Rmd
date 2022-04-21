@@ -17,3 +17,12 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(researchr)
 ```
+
+Research experience has become a more heavily valued component of the careers of undergraduates, graduate students, post-doctoral students, and even high school students. In regard to graduate admissions, it is essential for undergraduates to show years of research experience in their applications, especially for admission to doctoral programs. Regardless of one's position or need, `researchr` aims to make learning about research opportunities more accessible.
+
+`researchr` helps to... put some bullet points, think about this
+
+This document provides a detailed look into `researchr`'s functions with examples to ensure that prospective or former researchers gain the most out of it. 
+
+
+
