@@ -26,5 +26,6 @@ Imports:
   readr,
   ggplot2,
   plotly,
-  stats
+  stats,
+  sf
 VignetteBuilder: knitr
