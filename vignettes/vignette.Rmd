@@ -28,5 +28,19 @@ Research experience has become a more heavily valued component of the careers of
 
 This document provides a detailed look into `researchr`'s functions with examples to ensure that prospective or former researchers gain the most out of its capabilities.
 
+##Getting the Data
+###Exporting NIH Data to the Global Environment
+
+`nih_research` allows the user to input a year between 1985 - 2021 and returns a data frame to the global environment containing research opportunities of the relevant year. Here is an example of how to collect opportunities from 2021:
+
+```{r}
+nih_research(2021)
+```
+
+##Analyzing the Data
+###Weighing Finances with `median_total_cost`
+
+`median_total_cost` takes the data collected by `nih_research` and translates it into an interactive bar graph that poses median total cost against the number of years of support. 
+
 
 
