@@ -1,3 +1,16 @@
+#' funding_frequency
+#'
+#' @name funding_frequency
+#' @param data_frame an nih exporter data frame extracted by the nih_research function
+#' @usage funding_frequency(data_frame)
+#' @return a graph of funding frequency by state
+#'
+#' @import dplyr
+#' @import utils
+#' @import ggplot2
+#' @import plotly
+#' @export
+
 funding_frequency <- function(data_frame){
   wd <- getwd()
   states <- read_sf(paste0(wd, "/cb_2020_us_state_20m/cb_2020_us_state_20m.shp"))
