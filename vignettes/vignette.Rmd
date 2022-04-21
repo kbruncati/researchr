@@ -20,9 +20,13 @@ library(researchr)
 
 Research experience has become a more heavily valued component of the careers of undergraduates, graduate students, post-doctoral students, and even high school students. In regard to graduate admissions, it is essential for undergraduates to show years of research experience in their applications, especially for admission to doctoral programs. Regardless of one's position or need, `researchr` aims to make learning about research opportunities more accessible.
 
-`researchr` helps to... put some bullet points, think about this
+`researchr` helps to
+- eliminate fuss of downloading CSV files from the NIH research exporter and make an accessible data frame in the global environment 
+- look at projects from past years to see what kind of opportunities are available and spark curiosity 
+- find recently established opportunities still being supported that the user can apply to
+- create data visualizations to analyze funding of opportunities and funding frequency
 
-This document provides a detailed look into `researchr`'s functions with examples to ensure that prospective or former researchers gain the most out of it. 
+This document provides a detailed look into `researchr`'s functions with examples to ensure that prospective or former researchers gain the most out of its capabilities.
 
 
 
