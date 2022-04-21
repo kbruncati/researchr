@@ -15,7 +15,7 @@
 
 funding_frequency <- function(data_frame){
   wd <- getwd()
-  states <- sf::read_sf(paste0(wd, "/cb_2020_us_state_20m/cb_2020_us_state_20m.shp"))
+  states <- sf::read_sf(paste0(wd, "/data/cb_2020_us_state_20m.shp"))
 
   data4 <- table(data_frame$ORG_STATE)
   data4 <- as.data.frame(data4)
@@ -32,12 +32,12 @@ funding_frequency <- function(data_frame){
   g <- ggplot(states.map) +
     geom_sf(aes(fill=frequency)) +
     scale_fill_distiller("the number of times each state got funded", palette="Spectral") +
-    ggtitle("Funding Frequency by State")
+    ggtitle("Funding Frequency by State") +
+    coord_sf(xlim = c(-150, 0), ylim = c(20,70), expand = FALSE)
 
 
   pp <- plotly::ggplotly(g)
 
   return(pp)
 
-    #library(leaflet)
 }
