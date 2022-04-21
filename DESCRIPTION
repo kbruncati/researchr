@@ -27,6 +27,5 @@ Imports:
   ggplot2,
   plotly,
   stats,
-  sf,
-  qpdf
+  sf
 VignetteBuilder: knitr
