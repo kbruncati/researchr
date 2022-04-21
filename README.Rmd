@@ -32,7 +32,7 @@ remotes::install_github('kbruncati/diviiproject')
 
 ## Example
 
-Here are some basic examples to show what `data_return` returns to the user, as well as some "error" examples:
+Here are some basic examples to show what `data_return` returns to the user:
 
 ```{r example}
 library(researchr)
