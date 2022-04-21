@@ -11,6 +11,7 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
+library(researchr)
 ```
 
 # researchr
@@ -34,14 +35,10 @@ remotes::install_github('kbruncati/diviiproject')
 
 Here are some basic examples to show what data `nih_research` returns to the user:
 
-```{r example}
-library(researchr)
+```{r}
+class(nih_research(1999))
 
-class(nih_research(2002))
-
-ncol(nih_research(1999))  
-
-colnames(nih_research(1999))[-1] 
+colnames(nih_research(1999)) 
 ```
 
 ## ExPORTER Data Dictionary
@@ -49,13 +46,20 @@ colnames(nih_research(1999))[-1]
 If you need more information on a column in your NIH Research dataset, check out the [ExPORTER Data Dictionary](https://report.nih.gov/exporter-data-dictionary).
 
 ##Visualization Examples
-#median_total_cost
+###median_total_cost
 
-Here is a sample data visualization that `median_total_cost` returns to the user:
+Here is a sample interactive data visualization posing median total project costs against length of funding for 1999:
 
-```{r example}
-library(researchr)
+```{r}
 median_total_cost(data2)
+```
+
+###funding_frequency
+
+Here is another interactive data visualization that shows frequency of funding by state for 1999:
+
+```{r}
+funding_frequency(data2)
 ```
 
 ## Authors
