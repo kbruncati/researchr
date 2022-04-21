@@ -10,7 +10,7 @@
 #' @import ggplot2
 #' @import plotly
 #' @import sf
-#' @import stats
+#' @importFrom stats frequency
 #' @export
 
 funding_frequency <- function(data_frame){
