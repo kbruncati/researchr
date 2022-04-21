@@ -1,9 +1,9 @@
 #' funding_frequency
 #'
 #' @name funding_frequency
-#' @param data_frame an nih exporter data frame extracted by the nih_research function
+#' @param data_frame 2020 US State data saved within the package
 #' @usage funding_frequency(data_frame)
-#' @return a graph of funding frequency by state
+#' @return a graph of funding frequency by state (2020)
 #'
 #' @import dplyr
 #' @import utils

@@ -40,7 +40,18 @@ nih_research(2021)
 ##Analyzing the Data
 ###Weighing Finances with `median_total_cost`
 
-`median_total_cost` takes the data collected by `nih_research` and translates it into an interactive bar graph that poses median total cost against the number of years of support. 
+`median_total_cost` takes the data collected by `nih_research` and translates it into an interactive bar graph that poses median total cost against the number of years of support. The median total cost refers to the total project funding from all NIH Institute and Centers for the given fiscal year. 
 
+```{r}
+median_total_cost(data2)
+```
+
+###Funding Wars
+
+`funding_frequency` creates a data visualization based on 2020 data to show how frequently a state has received NIH funding. 
+
+```{r}
+#funding_frequency(data4)
+```
 
 
