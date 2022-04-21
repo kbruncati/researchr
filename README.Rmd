@@ -44,6 +44,10 @@ ncol(nih_research(1999))
 colnames(nih_research(1999))[-1] 
 ```
 
+## ExPORTER Data Dictionary
+
+If you need more information on a column in your NIH Research dataset, check out the [ExPORTER Data Dictionary](https://report.nih.gov/exporter-data-dictionary).
+
 ## Authors
 
 Benjamin Bruncati and Hongtong Lin
