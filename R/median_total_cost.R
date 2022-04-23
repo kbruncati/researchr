@@ -21,7 +21,7 @@ median_total_cost <- function(your_dataFrame){
     xlab("support years") +
     ylab("median cost (dollars)") +
     ggplot2::ggtitle("Median total cost v. support years")
-    #theme(plot.title = element_text(hjust = 0.5)) #center title of bar graph
+    #theme(plot.title = element_text(hjust = 0.5)) #use this to somehow move title? so far right
   # plot out the bar graphs
 
   data3.graph <- data3.graph + theme(
