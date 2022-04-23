@@ -28,7 +28,7 @@ funding_frequency <- function(data_frame){
   states.map <- states[order(states$STUSPS), ] %>%
     sf::st_zm() %>%
     mutate(frequency = states.final$Freq) # create a map filled with funding frequency
-
+    #currently an error at line 30
   g <- ggplot(states.map, label = states.final) +
     geom_sf(aes(fill=frequency)) + # plot out the map filled with funding frequency
     scale_fill_distiller("the number of times \neach state got funded", palette="Spectral") +
