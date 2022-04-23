@@ -18,9 +18,10 @@ median_total_cost <- function(your_dataFrame){
 
   data3.graph <- ggplot2::ggplot(data = data3, aes(x = SUPPORT_YEAR), y = median(TOTAL_COST)) +
     geom_bar() +
-    xlab("the number of support year") +
+    xlab("support years") +
     ylab("median cost (dollars)") +
-    ggplot2::ggtitle(paste0(("The median total cost corresponding to \n the number of support year in "), 2001))
+    ggplot2::ggtitle("Median total cost v. support years")
+    #theme(plot.title = element_text(hjust = 0.5)) #center title of bar graph
   # plot out the bar graphs
 
   data3.graph <- data3.graph + theme(

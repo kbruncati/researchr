@@ -1,6 +1,5 @@
 ---
 output: github_document
-always_allow_html: yes
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -13,8 +12,6 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 library(researchr)
-install.packages("webshot")
-webshot::install_phantomjs()
 ```
 
 # researchr
@@ -50,11 +47,15 @@ If you need more information on a column in your NIH Research dataset, check out
 
 ## Visualization Examples
 
-Here is a sample interactive data visualization posing median total project costs against length of funding for 1999:
+With `median_total_cost`, the user gets an interactive plot posing number of support years against median total cost for a project. Median total cost refers to total project funding from all NIH Institute and Centers. You can use the function like so:
 
-```{r}
+```
 median_total_cost(data2)
 ```
+
+Here is a sample screenshot of an interactive plot for 1999 data:
+
+![1999 Sample Plot](sample plots/1999 median_total_cost.png) 
 
 Here is another interactive data visualization that shows frequency of funding by state for 1999:
 
