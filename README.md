@@ -37,7 +37,7 @@ user:
 ``` r
 colnames(nih_research(1999)) 
 #> https://reporter.nih.gov/services/exporter/Download?fileId=30
-#> /tmp/Rtmpvqk4Zy/RePORTER_PRJ_C_FY1999.csv
+#> /tmp/Rtmpy5grgd/RePORTER_PRJ_C_FY1999.csv
 #> Rows: 80081 Columns: 42
 #> ── Column specification ────────────────────────────────────────────────────────
 #> Delimiter: ","
@@ -97,7 +97,7 @@ With `funding_frequency`, the user gets an interactive map plot of the
 United States that color codes based on frequency of NIH funding. The
 user can hover their mouse over each state for specific counts and
 adjust visual settings as needed. You can create one of these plots like
-so
+so:
 
     funding_frequency(data2)
 

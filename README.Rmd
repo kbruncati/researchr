@@ -57,7 +57,7 @@ Here is a sample screenshot of an interactive plot for 1999 data:
 
 ![1999 Sample Plot](sample plots/1999 median_total_cost.png) 
 
-With `funding_frequency`, the user gets an interactive map plot of the United States that color codes based on frequency of NIH funding. The user can hover their mouse over each state for specific counts and adjust visual settings as needed. You can create one of these plots like so
+With `funding_frequency`, the user gets an interactive map plot of the United States that color codes based on frequency of NIH funding. The user can hover their mouse over each state for specific counts and adjust visual settings as needed. You can create one of these plots like so:
 
 ```
 funding_frequency(data2)
