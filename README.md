@@ -23,53 +23,39 @@ You can install researchr like so:
 
     remotes::install_github('kbruncati/diviiproject')
 
-## Data Examples
+## Getting the Data
 
-Here are some basic examples to show what data `nih_research` returns to
-the user:
+With `nih_research`, the user can select a year between 1985 - 2021 and
+will receive a data frame with NIH funded research opportunities
+relevant to the selected year. From there, the user can make use of the
+other two functions, `median_total_cost` and `funding_frequency`, to
+take a closer look at the funding data for the selected year.
+
+Here are the columns of the dataframe that `nih_research` returns to the
+user:
 
 ``` r
-class(nih_research(1999))
-#> https://reporter.nih.gov/services/exporter/Download?fileId=30
-#> /tmp/Rtmp4ylnMk/RePORTER_PRJ_C_FY1999.csv
-#> Rows: 80081 Columns: 42
-#> ── Column specification ────────────────────────────────────────────────────────
-#> Delimiter: ","
-#> chr  (29): ACTIVITY, ADMINISTERING_IC, BUDGET_START, BUDGET_END, CORE_PROJEC...
-#> dbl   (6): APPLICATION_ID, APPLICATION_TYPE, CFDA_CODE, FY, SERIAL_NUMBER, S...
-#> lgl   (6): ARRA_FUNDED, FUNDING_ICs, NIH_SPENDING_CATS, PHR, TOTAL_COST, TOT...
-#> dttm  (1): AWARD_NOTICE_DATE
-#> 
-#> ℹ Use `spec()` to retrieve the full column specification for this data.
-#> ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-#> Rows: 80081 Columns: 42
-#> ── Column specification ────────────────────────────────────────────────────────
-#> Delimiter: ","
-#> chr  (29): ACTIVITY, ADMINISTERING_IC, BUDGET_START, BUDGET_END, CORE_PROJEC...
-#> dbl   (6): APPLICATION_ID, APPLICATION_TYPE, CFDA_CODE, FY, SERIAL_NUMBER, S...
-#> lgl   (6): ARRA_FUNDED, FUNDING_ICs, NIH_SPENDING_CATS, PHR, TOTAL_COST, TOT...
-#> dttm  (1): AWARD_NOTICE_DATE
-#> 
-#> ℹ Use `spec()` to retrieve the full column specification for this data.
-#> ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-#> [1] "spec_tbl_df" "tbl_df"      "tbl"         "data.frame"
-
 colnames(nih_research(1999)) 
 #> https://reporter.nih.gov/services/exporter/Download?fileId=30
-#> /tmp/Rtmp4ylnMk/RePORTER_PRJ_C_FY1999.csv
-#> Rows: 80081 Columns: 42── Column specification ────────────────────────────────────────────────────────
+#> /tmp/Rtmpvqk4Zy/RePORTER_PRJ_C_FY1999.csv
+#> Rows: 80081 Columns: 42
+#> ── Column specification ────────────────────────────────────────────────────────
 #> Delimiter: ","
 #> chr  (29): ACTIVITY, ADMINISTERING_IC, BUDGET_START, BUDGET_END, CORE_PROJEC...
 #> dbl   (6): APPLICATION_ID, APPLICATION_TYPE, CFDA_CODE, FY, SERIAL_NUMBER, S...
 #> lgl   (6): ARRA_FUNDED, FUNDING_ICs, NIH_SPENDING_CATS, PHR, TOTAL_COST, TOT...
 #> dttm  (1): AWARD_NOTICE_DATE
+#> 
 #> ℹ Use `spec()` to retrieve the full column specification for this data.
-#> ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.Rows: 80081 Columns: 42── Column specification ────────────────────────────────────────────────────────
+#> ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+#> Rows: 80081 Columns: 42
+#> ── Column specification ────────────────────────────────────────────────────────
 #> Delimiter: ","
 #> chr  (29): ACTIVITY, ADMINISTERING_IC, BUDGET_START, BUDGET_END, CORE_PROJEC...
 #> dbl   (6): APPLICATION_ID, APPLICATION_TYPE, CFDA_CODE, FY, SERIAL_NUMBER, S...
 #> lgl   (6): ARRA_FUNDED, FUNDING_ICs, NIH_SPENDING_CATS, PHR, TOTAL_COST, TOT...
 #> dttm  (1): AWARD_NOTICE_DATE
+#> 
 #> ℹ Use `spec()` to retrieve the full column specification for this data.
 #> ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 #>  [1] "APPLICATION_ID"         "ACTIVITY"               "ADMINISTERING_IC"      
@@ -107,12 +93,17 @@ Here is a sample screenshot of an interactive plot for 1999 data:
 
 ![1999 Sample Plot](sample%20plots/1999%20median_total_cost.png)
 
-Here is another interactive data visualization that shows frequency of
-funding by state for 1999:
+With `funding_frequency`, the user gets an interactive map plot of the
+United States that color codes based on frequency of NIH funding. The
+user can hover their mouse over each state for specific counts and
+adjust visual settings as needed. You can create one of these plots like
+so
 
-``` r
-#funding_frequency(data2) this doesnt currently work for some reason...
-```
+    funding_frequency(data2)
+
+Here is a sample screenshot of an interactive plot for 2001 data:
+
+![2001 Sample Plot](sample%20plots/2001_funding_frequency.png)
 
 ## Authors
 

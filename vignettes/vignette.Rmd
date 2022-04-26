@@ -22,7 +22,7 @@ Research experience has become a more heavily valued component of the careers of
 
 `researchr` helps to
 - eliminate fuss of downloading CSV files from the NIH research exporter and make an accessible data frame in the global environment 
-- look at projects from past years to see what kind of opportunities are available and spark curiosity 
+- look at projects from past years to see what kind of opportunities are available and spark curiosity/inspiration for a future project
 - find recently established opportunities still being supported that the user can apply to
 - create data visualizations to analyze funding of opportunities and funding frequency
 
@@ -37,6 +37,8 @@ This document provides a detailed look into `researchr`'s functions with example
 nih_research(2021)
 ```
 
+As cited in the README, check out the ExPORTER Data Dictionary for more specifics on each respective column. Some columns of interest may include `Org_Name`(the name of the institution or agency receiving the grant), `PI_Name(s)` (the principal investigator or investigators), and `Total_Cost` (total project funding). 
+
 ##Analyzing the Data
 ###Weighing Finances with `median_total_cost`
 
@@ -48,10 +50,10 @@ median_total_cost(data2)
 
 ###Funding Wars
 
-`funding_frequency` creates a data visualization based to show how frequently a state has received NIH funding during the selected year. 
+`funding_frequency` creates a data visualization based to show how frequently a state has received NIH funding during the selected year. You can take a closer look at the frequency of a certain state by hovering over it with your mouse. `plotly` also allows you to zoom and autoscale. 
 
 ```{r}
-#funding_frequency(data4)
+funding_frequency(data2)
 ```
 
 
