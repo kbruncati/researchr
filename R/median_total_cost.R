@@ -25,7 +25,7 @@ median_total_cost <- function(your_dataFrame){
   # plot out the bar graphs
 
   data3.graph <- data3.graph + theme(
-    plot.title = element_text(color = "black", size = 12, face = "bold", hjust = 0.9))
+    plot.title = element_text(color = "black", size = 12, face = "bold", hjust = 0.5))
   # change the theme of the title
 
   data3.interactiveGraph <- plotly::ggplotly(data3.graph) # make the graph more interactive
