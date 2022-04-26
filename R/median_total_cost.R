@@ -13,6 +13,7 @@
 #' @export
 
 median_total_cost <- function(your_dataFrame){
+  year <- your_dataFrame$FY[1]
   data3 <- your_dataFrame %>%
     select(c(SUPPORT_YEAR, TOTAL_COST)) # filter the data frame
 
@@ -20,13 +21,13 @@ median_total_cost <- function(your_dataFrame){
     geom_bar() +
     xlab("support years") +
     ylab("median cost (dollars)") +
-    ggplot2::ggtitle("Median total cost v. support years")
-    #theme(plot.title = element_text(hjust = 0.5)) #use this to somehow move title? so far right
+    ggplot2::ggtitle(paste0("Median total cost v. support years in ", year))
   # plot out the bar graphs
 
   data3.graph <- data3.graph + theme(
     plot.title = element_text(color = "black", size = 12, face = "bold", hjust = 0.5))
   # change the theme of the title
+  return(data3.graph)
 
   data3.interactiveGraph <- plotly::ggplotly(data3.graph) # make the graph more interactive
 
