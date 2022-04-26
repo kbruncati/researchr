@@ -7,10 +7,10 @@
 funding_frequency(data_frame)
 }
 \arguments{
-\item{data_frame}{an nih exporter data frame extracted by the nih_research function}
+\item{data_frame}{data of NIH research opportunities for year selected by user}
 }
 \value{
-a graph of funding frequency by state
+an interactive graph of funding frequency by state
 }
 \description{
 funding_frequency
