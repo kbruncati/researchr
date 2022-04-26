@@ -14,6 +14,7 @@
 #' @export
 
 funding_frequency <- function(data_frame){
+  year <- data_frame$FY[1]
   wd <- getwd() # get the working directory for this R file
   states <- sf::read_sf(paste0(wd, "/data/cb_2020_us_state_20m.shp")) # get the path name of the map file
 
@@ -33,14 +34,15 @@ funding_frequency <- function(data_frame){
   g <- ggplot(states.map, label = states.final) +
     geom_sf(aes(fill=frequency)) + # plot out the map filled with funding frequency
     scale_fill_distiller("the number of times \neach state got funded", palette="Spectral") +
-    ggtitle(label = "Funding Frequency by State") +
+    ggtitle(label = paste0("Funding Frequency by State in ", year)) +
     coord_sf(xlim = c(-170, -50), ylim = c(10,70), expand = FALSE) + # change the map size and view
     theme(plot.title = element_text(face = "bold"),
           legend.title = element_text(size = 8), # change the font size of the legend title
           legend.text = element_text(size = 6)) # change the font size of the numbers in the legend
 
   fund.freq.map <- plotly::ggplotly(g) %>%
-    plotly::layout(title = list(text = paste0('Funding Frequency by State',
+    plotly::layout(title = list(text = paste0('Funding Frequency by State in ',
+                                              year,
                                               '<br>',
                                               '<sup>',
                                               'Select a state to view the funding frequency',
