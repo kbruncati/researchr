@@ -37,7 +37,7 @@ user:
 ``` r
 colnames(nih_research(1999)) 
 #> https://reporter.nih.gov/services/exporter/Download?fileId=30
-#> /tmp/Rtmpy5grgd/RePORTER_PRJ_C_FY1999.csv
+#> /tmp/RtmpCQhzZJ/RePORTER_PRJ_C_FY1999.csv
 #> Rows: 80081 Columns: 42
 #> ── Column specification ────────────────────────────────────────────────────────
 #> Delimiter: ","
@@ -103,7 +103,7 @@ so:
 
 Here is a sample screenshot of an interactive plot for 2001 data:
 
-![2001 Sample Plot](sample%20plots/2001_funding_frequency.png)
+![1999 Sample Plot](sample%20plots/1999_funding_frequency.png)
 
 ## Authors
 
