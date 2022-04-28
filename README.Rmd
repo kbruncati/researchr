@@ -65,7 +65,7 @@ funding_frequency(data2)
 
 Here is a sample screenshot of an interactive plot for 1999 data:
 
-![1999 Sample Plot](sample plots/1999_funding_frequency.png)
+![1999 Sample Plot](sample plots/1999 funding frequency.png)
 
 ## Authors
 
