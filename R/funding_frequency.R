@@ -23,9 +23,9 @@ funding_frequency <- function(data_frame){
 
   data4 <- as.data.frame(data4) # make the table as the data frame
   state.ex <- c("AB","AS","BC", "GU", "MB", "MH", "MP", "NS", "PW", "QC","ON",
-                "QC", "VI", "PQ", "SK") # create a list of state names that are not in the census
+                "QC", "VI", "PQ", "SK","NL", "FM", "NB", "PE") # create a list of state names that are not in the census
   states.final <- data4[!grepl(paste(state.ex, collapse='|'), data4$Var1),] # remove those nonexistent state names
-  states.final <- states.final[-1,] # remove the first row that shows the total frequency
+  #states.final <- states.final[-1,] # remove the first row that shows the total frequency
 
   states.map <- states[order(states$STUSPS), ] %>%
     sf::st_zm() %>%
