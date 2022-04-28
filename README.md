@@ -101,7 +101,7 @@ so:
 
     funding_frequency(data2)
 
-Here is a sample screenshot of an interactive plot for 2001 data:
+Here is a sample screenshot of an interactive plot for 1999 data:
 
 ![1999 Sample Plot](sample%20plots/1999_funding_frequency.png)
 
