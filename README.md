@@ -103,7 +103,7 @@ so:
 
 Here is a sample screenshot of an interactive plot for 1999 data:
 
-![1999 Sample Plot](sample plots/1999 funding frequency.png)
+![1999 Sample Plot](sample%20plots/1999%20funding frequency.png)
 
 ## Authors
 
