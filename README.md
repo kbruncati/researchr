@@ -21,7 +21,7 @@ location, department, and much more.
 
 You can install researchr like so:
 
-    remotes::install_github('kbruncati/diviiproject')
+    remotes::install_github('kbruncati/researchr')
 
 ## Getting the Data
 
