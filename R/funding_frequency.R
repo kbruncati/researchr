@@ -8,7 +8,6 @@
 #' @import dplyr
 #' @import utils
 #' @import ggplot2
-#' @import plotly
 #' @import sf
 #' @importFrom stats frequency
 #' @export

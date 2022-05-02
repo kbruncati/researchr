@@ -20,7 +20,8 @@ library(researchr)
 
 Research experience has become a more heavily valued component of the careers of undergraduates, graduate students, post-doctoral students, and even high school students. In regard to graduate admissions, it is essential for undergraduates to show years of research experience in their applications, especially for admission to doctoral programs. Regardless of one's position or need, `researchr` aims to make learning about research opportunities more accessible.
 
-`researchr` helps to
+`researchr` helps to:
+
 - eliminate fuss of downloading CSV files from the NIH research exporter and make an accessible data frame in the global environment 
 - look at projects from past years to see what kind of opportunities are available and spark curiosity/inspiration for a future project
 - find recently established opportunities still being supported that the user can apply to
@@ -28,8 +29,8 @@ Research experience has become a more heavily valued component of the careers of
 
 This document provides a detailed look into `researchr`'s functions with examples to ensure that prospective or former researchers gain the most out of its capabilities.
 
-##Getting the Data
-###Exporting NIH Data to the Global Environment
+## Getting the Data
+### Exporting NIH Data to the Global Environment
 
 `nih_research` allows the user to input a year between 1985 - 2021 and returns a data frame to the global environment containing research opportunities of the relevant year. Here is an example of how to collect opportunities from 2021:
 
@@ -39,18 +40,18 @@ nih_research(2021)
 
 As cited in the README, check out the ExPORTER Data Dictionary for more specifics on each respective column. Some columns of interest may include `Org_Name`(the name of the institution or agency receiving the grant), `PI_Name(s)` (the principal investigator or investigators), and `Total_Cost` (total project funding). 
 
-##Analyzing the Data
-###Weighing Finances with `median_total_cost`
+## Analyzing the Data
+### Weighing Finances with `median_total_cost()`
 
-`median_total_cost` takes the data collected by `nih_research` and translates it into an interactive bar graph that poses median total cost against the number of years of support. The median total cost refers to the total project funding from all NIH Institute and Centers for the given fiscal year. Simply write in the dataframe you received from `nih_research` as your argument, and you'll be good to go!
+`median_total_cost()` takes the data collected by `nih_research()` and translates it into an interactive bar graph that poses median total cost against the number of years of support. The median total cost refers to the total project funding from all NIH Institute and Centers for the given fiscal year. Simply write in the dataframe you received from `nih_research()` as your argument, and you'll be good to go!
 
 ```
 median_total_cost(data2)
 ```
 
-###Funding Wars
+### Funding Wars
 
-`funding_frequency` creates a data visualization based to show how frequently a state has received NIH funding during the selected year. You can take a closer look at the frequency of a certain state by hovering over it with your mouse. `plotly` also allows you to zoom and autoscale. Similarly to `median_total_cost`, just use your generated dataframe as the argument.
+`funding_frequency()` creates a data visualization based to show how frequently a state has received NIH funding during the selected year. You can take a closer look at the frequency of a certain state by hovering over it with your mouse. `plotly` also allows you to zoom and autoscale. Similarly to `median_total_cost()`, just use your generated dataframe as the argument.
 
 ```
 funding_frequency(data2)
